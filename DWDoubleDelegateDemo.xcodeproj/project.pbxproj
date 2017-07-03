@@ -15,6 +15,8 @@
 		CF5D29F31F0A39810022A5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5D29F11F0A39810022A5BB /* LaunchScreen.storyboard */; };
 		CF5D29FE1F0A39810022A5BB /* DWDoubleDelegateDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D29FD1F0A39810022A5BB /* DWDoubleDelegateDemoTests.m */; };
 		CF5D2A091F0A39810022A5BB /* DWDoubleDelegateDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D2A081F0A39810022A5BB /* DWDoubleDelegateDemoUITests.m */; };
+		CF5D2A181F0A39A30022A5BB /* MyCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D2A171F0A39A30022A5BB /* MyCustomTextField.m */; };
+		CF5D2A1C1F0A39D30022A5BB /* MyTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D2A1B1F0A39D30022A5BB /* MyTextFieldDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		CF5D2A041F0A39810022A5BB /* DWDoubleDelegateDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWDoubleDelegateDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5D2A081F0A39810022A5BB /* DWDoubleDelegateDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWDoubleDelegateDemoUITests.m; sourceTree = "<group>"; };
 		CF5D2A0A1F0A39810022A5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF5D2A161F0A39A30022A5BB /* MyCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomTextField.h; sourceTree = "<group>"; };
+		CF5D2A171F0A39A30022A5BB /* MyCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomTextField.m; sourceTree = "<group>"; };
+		CF5D2A191F0A39B70022A5BB /* MyTextFieldProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTextFieldProtocol.h; sourceTree = "<group>"; };
+		CF5D2A1A1F0A39D30022A5BB /* MyTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextFieldDelegate.h; sourceTree = "<group>"; };
+		CF5D2A1B1F0A39D30022A5BB /* MyTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextFieldDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +112,11 @@
 				CF5D29E71F0A39810022A5BB /* AppDelegate.m */,
 				CF5D29E91F0A39810022A5BB /* ViewController.h */,
 				CF5D29EA1F0A39810022A5BB /* ViewController.m */,
+				CF5D2A161F0A39A30022A5BB /* MyCustomTextField.h */,
+				CF5D2A171F0A39A30022A5BB /* MyCustomTextField.m */,
+				CF5D2A191F0A39B70022A5BB /* MyTextFieldProtocol.h */,
+				CF5D2A1A1F0A39D30022A5BB /* MyTextFieldDelegate.h */,
+				CF5D2A1B1F0A39D30022A5BB /* MyTextFieldDelegate.m */,
 				CF5D29EC1F0A39810022A5BB /* Main.storyboard */,
 				CF5D29EF1F0A39810022A5BB /* Assets.xcassets */,
 				CF5D29F11F0A39810022A5BB /* LaunchScreen.storyboard */,
@@ -273,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5D2A1C1F0A39D30022A5BB /* MyTextFieldDelegate.m in Sources */,
+				CF5D2A181F0A39A30022A5BB /* MyCustomTextField.m in Sources */,
 				CF5D29EB1F0A39810022A5BB /* ViewController.m in Sources */,
 				CF5D29E81F0A39810022A5BB /* AppDelegate.m in Sources */,
 				CF5D29E51F0A39810022A5BB /* main.m in Sources */,
@@ -371,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -413,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -425,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DWDoubleDelegateDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dawn.DWDoubleDelegateDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DWDoubleDelegateDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dawn.DWDoubleDelegateDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
